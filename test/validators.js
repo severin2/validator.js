@@ -64,6 +64,10 @@ describe('Validators', function () {
               , 'http://duckduckgo.com/?q=%2F'
               , 'http://foobar.com/t$-_.+!*\'(),'
               , 'http://localhost:3000/'
+              , 'rtmp://itsanrtmpurl.com'
+              , 'rtmp://127.0.0.1'
+              , 'rtmps://itsa.secureurl'
+              , 'rtmp://10.0.0.1/vod/mp4:path/to/file/fileservedbymediaserver'
             ]
           , invalid: [
                 'xyz://foobar.com'
@@ -74,6 +78,8 @@ describe('Validators', function () {
               , 'http://com/'
               , 'http://300.0.0.1/'
               , 'mailto:foo@bar.com'
+              , 'rtmp://bad/'
+              , 'rtmps://256.257.258.259/'
             ]
         });
     });
